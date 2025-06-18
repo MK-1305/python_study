@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app       # 開発中のコードをホットリロード可能に
+    ports:
+      - "8000:8000"
+    command: python app.py
