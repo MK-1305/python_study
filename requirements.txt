@@ -1,6 +1,11 @@
-# ターミナルでPython実行
+# Macの場合
 docker run --rm -it \
   -v "$PWD":/app -w /app \
   python:3.10-slim bash
+# → コンテナ内で
+python app.py
+
+#windowsの場合
+docker run --rm -it -v ${PWD}:/app -w /app python:3.10-slim bash
 # → コンテナ内で
 python app.py
